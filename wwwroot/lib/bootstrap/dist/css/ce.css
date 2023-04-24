@@ -1,0 +1,79 @@
+/* Navbar Brand */
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+  font-size: 24px;
+  color: #1b6ec2; /* Altera a cor do texto */
+}
+
+/* Links */
+a {
+  color: #1b6ec2; /* Altera a cor dos links */
+  transition: color 0.3s ease; /* Adiciona uma transição suave na cor dos links */
+}
+
+a:hover {
+  color: #0077cc; /* Altera a cor dos links ao passar o mouse sobre eles */
+}
+
+/* Botão Primário */
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo do botão */
+}
+
+.btn-primary:hover {
+  background-color: #0077cc; /* Altera a cor de fundo do botão ao passar o mouse sobre ele */
+}
+
+/* Links ativos nas Nav Pills */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Bordas */
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Sombra */
+.box-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajusta a sombra para ficar mais suave */
+}
+
+/* Botão de Aceitar Política */
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+  background-color: #1b6ec2;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo do botão */
+}
+
+button.accept-policy:hover {
+  background-color: #0077cc; /* Altera a cor de fundo do botão ao passar o mouse sobre ele */
+}
+
+/* Rodapé */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+  background-color: #f8f9fa; /* Altera a cor de fundo do rodapé */
+  color: #6c757d; /* Altera a cor do texto do rodapé */
+  text-align: center; /* Centraliza o texto no rodapé */
+}

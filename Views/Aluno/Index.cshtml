@@ -1,0 +1,65 @@
+﻿@model X.PagedList.IPagedList<trabalho.Models.Aluno>
+@using X.PagedList.Mvc.Core
+
+@{
+    ViewData["Title"] = "Pagina de Aluno";
+}
+
+<h1 class="display-4">Aluno</h1>
+<p>
+    <a class="btn btn-primary" asp-action="Create">Adicionar Aluno</a>
+</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nome</th>
+                <th>Data de Nascimento</th>
+                <th>Email</th>
+                <th>Instagram</th>
+                <th>Telefone</th>
+                <th>Personal</th>
+                <th>Observações</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Data_Nascimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Instagram)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Personal.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Observacoes)
+                    </td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.AlunoId">Editar</a>
+                            <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.AlunoId">Detalhes</a>
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.AlunoId">Apagar</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="row justify-content-center">
+    @Html.PagedListPager(Model, pag => Url.Action("Index", new { pag }))
+</div>

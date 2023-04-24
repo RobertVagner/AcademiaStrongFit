@@ -1,0 +1,33 @@
+﻿@model trabalho.Models.Personal
+
+@{
+    ViewData["Title"] = "Apagar personal";
+}
+
+<h1>Apagar</h1>
+
+<h3>Deseja apagar esse personal?</h3>
+<div>
+    <h4>Personal</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Especialidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Especialidade)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="PersonalId" />
+        <input type="submit" value="Deletar" class="btn btn-danger" /> |
+        <a asp-action="Index">Retornar para a lista</a>
+    </form>
+</div>

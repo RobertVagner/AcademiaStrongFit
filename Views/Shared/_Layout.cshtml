@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" asp-href-include="/lib/bootstrap/dist/**/*.min.css" />
+	<title>Exemplo ASP.NET Core MVC com Entity Framework</title>
+</head>
+
+<body>
+    <style>
+        .navbar {
+            background-color: #333; /* cor de fundo do menu */
+            display: flex; /* para alinhar os itens do menu em linha */
+            justify-content: center; /* para centralizar os itens horizontalmente */
+            padding: 10px; /* espaçamento interno do menu */
+        }
+
+        .navbar-brand {
+            color: #fff; /* cor do texto dos itens do menu */
+            margin-right: 10px; /* espaçamento entre os itens do menu */
+            text-decoration: none; /* remover sublinhado dos links */
+            padding: 5px; /* espaçamento interno dos itens do menu */
+        }
+
+            .navbar-brand:hover {
+                color: #f8f9fa; /* cor do texto dos itens do menu ao passar o mouse */
+            }
+    </style>
+
+    <div class="navbar">
+        <div class="navbar-brand">@Html.ActionLink("Alunos", "Index", "Aluno")</div>
+        <div class="navbar-brand">@Html.ActionLink("Personal", "Index", "Personal")</div>
+        <div class="navbar-brand">@Html.ActionLink("Categoria", "Index", "Categoria")</div>
+        <div class="navbar-brand">@Html.ActionLink("Exercício", "Index", "Exercicio")</div>
+        <div class="navbar-brand">@Html.ActionLink("Treino", "Index", "Treino")</div>
+    </div>
+	<div class="row m-1 p-1">
+		<div id="categories" class="col-3">
+			Logo
+		</div>
+		<div class="col-9">
+			@RenderBody()
+		</div>
+	</div>
+</body>
+@RenderSection("Scripts",required: false)
+</html>s

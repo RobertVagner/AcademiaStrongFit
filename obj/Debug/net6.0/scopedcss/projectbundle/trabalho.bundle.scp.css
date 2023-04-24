@@ -1,0 +1,44 @@
+/* _content/trabalho/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Global styles */
+
+.btn-primary[b-o49caw5obe] {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--border-color);
+}
+
+
+
+/* Pills styles */
+.nav-pills .nav-link.active[b-o49caw5obe],
+.nav-pills .show > .nav-link[b-o49caw5obe] {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--border-color);
+}
+
+/* Border styles */
+.border-top[b-o49caw5obe],
+.border-bottom[b-o49caw5obe] {
+    border: 1px solid var(--border-color);
+}
+
+/* Box shadow styles */
+.box-shadow[b-o49caw5obe] {
+    box-shadow: var(--box-shadow);
+}
+
+/* Button styles */
+button.accept-policy[b-o49caw5obe] {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Footer styles */
+.footer[b-o49caw5obe] {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: var(--footer-height);
+}

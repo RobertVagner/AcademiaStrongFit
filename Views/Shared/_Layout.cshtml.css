@@ -1,0 +1,43 @@
+﻿/* Global styles */
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--border-color);
+}
+
+
+
+/* Pills styles */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--border-color);
+}
+
+/* Border styles */
+.border-top,
+.border-bottom {
+    border: 1px solid var(--border-color);
+}
+
+/* Box shadow styles */
+.box-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+/* Button styles */
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Footer styles */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: var(--footer-height);
+}

@@ -1,0 +1,49 @@
+﻿@model X.PagedList.IPagedList<trabalho.Models.Personal>
+@using X.PagedList.Mvc.Core
+
+@{
+    ViewData["Title"] = "Pagina de Personal";
+}
+
+<h1 class="display-4">Personal</h1>
+<p>
+    <a class="btn btn-primary" asp-action="Create">Adicionar personal</a>
+</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Especialidade
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Especialidade)
+                    </td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.PersonalId">Editar</a>
+                            <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.PersonalId">Detalhes</a>
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.PersonalId">Apagar</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="row justify-content-center">
+    @Html.PagedListPager(Model, pag => Url.Action("Index", new { pag }))
+</div>
